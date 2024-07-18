@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Clockdate = () => {
     
     
         var dateindia = new Date;
+         const [cdate,setcdate] = useState(dateindia);
+
+        function updatedate(){
+          dateindia = new Date;
+          setcdate(dateindia);
+        }
+        setInterval(() => {
+          updatedate();
+        }, 10000);
     
   return (
     <>
